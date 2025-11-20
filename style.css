@@ -1,0 +1,7 @@
+body{font-family:Arial;margin:0;background:#f3f3f3;}
+header{background:#346beb;color:white;padding:20px;text-align:center;}
+nav{display:flex;overflow-x:auto;background:white;padding:10px;gap:10px;}
+nav button{flex:1;padding:10px;border:none;background:#eaeaea;cursor:pointer;}
+.page{display:none;padding:15px;}
+.page.active{display:block;}
+.card{background:white;padding:30px;font-size:24px;text-align:center;border-radius:10px;margin-bottom:20px;}

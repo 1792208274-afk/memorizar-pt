@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memorizar PT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header><h1>Memorizar PT</h1></header>
+    <nav>
+        <button onclick="showSection('list')">📘 单词</button>
+        <button onclick="showSection('flashcards')">📝 单词卡</button>
+        <button onclick="showSection('quiz')">🧠 测验</button>
+        <button onclick="showSection('add')">➕ 添加单词</button>
+        <button onclick="showSection('favorites')">⭐ 收藏</button>
+    </nav>
+    <section id="list" class="page active">
+        <input id="search" placeholder="搜索单词..." oninput="searchWord()">
+        <ul id="wordList"></ul>
+    </section>
+    <section id="flashcards" class="page">
+        <div id="flashCard" class="card"></div>
+        <button onclick="nextCard()">下一张</button>
+    </section>
+    <section id="quiz" class="page">
+        <div id="quizQuestion"></div>
+        <div id="quizOptions"></div>
+        <button onclick="nextQuiz()">下一题</button>
+    </section>
+    <section id="add" class="page">
+        <h2>添加新的单词</h2>
+        <input id="newPt" placeholder="葡语单词">
+        <input id="newCn" placeholder="中文意思">
+        <button onclick="addWord()">添加</button>
+    </section>
+    <section id="favorites" class="page">
+        <h2>⭐ 收藏的单词</h2>
+        <ul id="favoriteList"></ul>
+    </section>
+</body>
+</html>
